@@ -1,19 +1,21 @@
 *** Settings ***
 Documentation    Cenarios de testes do cadastro de usuarios de
 
-Library    Browser
-Library    FakerLibrary
+#Library    FakerLibrary
+
+Resource    ../resources/base.robot
 
 *** Test Cases ***
 Deve poder cadastrar um novo usuário
     #Massa de teste dinamica
-    ${name}        FakerLibrary.Name
-    ${email}       FakerLibrary.Free Email
+    ${name}        Set Variable    Isa Costa
+    ${email}       Set Variable    Isacosta@gmail.com
     ${password}    Set Variable    pwd123
 
     #Seção do navegador
-    New Browser    browser=chromium    headless=False
-    New Page       http://localhost:3000/signup
+    Start Session
+
+    Go To    http://localhost:3000/signup
 
     #Checkpoint para garantir que o fluxo está correto
     Wait For Elements State    css=h1    visible    5
