@@ -1,15 +1,15 @@
 *** Settings ***
 Documentation    Cenarios de testes do cadastro de usuarios de
 
-#Library    FakerLibrary
+Library    FakerLibrary
 
 Resource    ../resources/base.robot
 
 *** Test Cases ***
 Deve poder cadastrar um novo usuário
     #Massa de teste dinamica
-    ${name}        Set Variable    Isa Costa
-    ${email}       Set Variable    Isacosta@gmail.com
+    ${name}        FakerLibrary.Name
+    ${email}       FakerLibrary.Free Email
     ${password}    Set Variable    pwd123
 
     #Seção do navegador

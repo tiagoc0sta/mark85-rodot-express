@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231127 14:17:34.732" rpa="false" schemaversion="4">
-<suite id="s1" name="Signup" source="C:\QAx\projects\mark85-rodot-express\testes\signup.robot">
-<test id="s1-t1" name="Deve poder cadastrar um novo usuário" line="9">
-<kw name="Set Variable" library="BuiltIn">
-<var>${name}</var>
-<arg>Isa Costa</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231127 14:17:36.065" level="INFO">${name} = Isa Costa</msg>
-<status status="PASS" starttime="20231127 14:17:36.065" endtime="20231127 14:17:36.065"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${email}</var>
-<arg>Isacosta@gmail.com</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231127 14:17:36.065" level="INFO">${email} = Isacosta@gmail.com</msg>
-<status status="PASS" starttime="20231127 14:17:36.065" endtime="20231127 14:17:36.065"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${password}</var>
-<arg>pwd123</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231127 14:17:36.066" level="INFO">${password} = pwd123</msg>
-<status status="PASS" starttime="20231127 14:17:36.066" endtime="20231127 14:17:36.066"/>
-</kw>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231127 15:48:03.983" rpa="false" schemaversion="4">
+<suite id="s1" name="Online" source="C:\QAx\projects\mark85-rodot-express\testes\online.robot">
+<test id="s1-t1" name="Webapp deve estar online" line="8">
 <kw name="Start Session" library="base">
 <kw name="New Browser" library="Browser">
 <arg>browser=chromium</arg>
@@ -30,121 +9,44 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20231127 14:17:36.067" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\QAx\\projects\\mark85-rodot-express\\logs\\browser\\traces\\c049498a-0821-4c5c-a3bf-063fe1cde839"}</msg>
-<msg timestamp="20231127 14:17:37.432" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\QAx\\projects\\mark85-rodot-express\\logs\\browser\\traces\\c049498a-0821-4c5c-a3bf-063fe1cde839"}</msg>
-<status status="PASS" starttime="20231127 14:17:36.066" endtime="20231127 14:17:37.432"/>
+<msg timestamp="20231127 15:48:05.352" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\QAx\\projects\\mark85-rodot-express\\logs\\browser\\traces\\5358f40d-81a5-4a48-b912-ce3e37a5c30d"}</msg>
+<msg timestamp="20231127 15:48:06.727" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\QAx\\projects\\mark85-rodot-express\\logs\\browser\\traces\\5358f40d-81a5-4a48-b912-ce3e37a5c30d"}</msg>
+<status status="PASS" starttime="20231127 15:48:05.351" endtime="20231127 15:48:06.727"/>
 </kw>
 <kw name="New Page" library="Browser">
 <arg>http://localhost:3000/</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<msg timestamp="20231127 14:17:38.596" level="INFO">Successfully initialized new page object and opened url: http://localhost:3000/</msg>
-<msg timestamp="20231127 14:17:38.596" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
-<status status="PASS" starttime="20231127 14:17:37.433" endtime="20231127 14:17:38.596"/>
+<msg timestamp="20231127 15:48:07.847" level="INFO">Successfully initialized new page object and opened url: http://localhost:3000/</msg>
+<msg timestamp="20231127 15:48:07.847" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20231127 15:48:06.728" endtime="20231127 15:48:07.847"/>
 </kw>
-<status status="PASS" starttime="20231127 14:17:36.066" endtime="20231127 14:17:38.597"/>
+<status status="PASS" starttime="20231127 15:48:05.350" endtime="20231127 15:48:07.847"/>
 </kw>
-<kw name="Go To" library="Browser">
-<arg>http://localhost:3000/signup</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Navigates to the given ``url``.</doc>
-<msg timestamp="20231127 14:17:38.748" level="INFO">Successfully opened URL http://localhost:3000/signup</msg>
-<status status="PASS" starttime="20231127 14:17:38.597" endtime="20231127 14:17:38.748"/>
-</kw>
-<kw name="Wait For Elements State" library="Browser">
-<arg>css=h1</arg>
-<arg>visible</arg>
-<arg>5</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20231127 14:17:38.821" level="INFO">Waited for Element with selector css=h1 at state visible</msg>
-<status status="PASS" starttime="20231127 14:17:38.749" endtime="20231127 14:17:38.821"/>
-</kw>
-<kw name="Get Text" library="Browser">
-<arg>css=h1</arg>
+<kw name="Get Title" library="Browser">
 <arg>equal</arg>
-<arg>Faça seu cadastro</arg>
+<arg>Mark85 by QAx</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20231127 14:17:38.877" level="INFO">Text: 'Faça seu cadastro'</msg>
-<status status="PASS" starttime="20231127 14:17:38.822" endtime="20231127 14:17:38.877"/>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20231127 15:48:07.867" level="INFO">Title: 'Mark85 by QAx'</msg>
+<status status="PASS" starttime="20231127 15:48:07.848" endtime="20231127 15:48:07.867"/>
 </kw>
-<kw name="Fill Text" library="Browser">
-<arg>id=name</arg>
-<arg>${name}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20231127 14:17:38.878" level="INFO">Fills the text 'Isa Costa' in the given field.</msg>
-<status status="PASS" starttime="20231127 14:17:38.878" endtime="20231127 14:17:38.930"/>
-</kw>
-<kw name="Fill Text" library="Browser">
-<arg>id=email</arg>
-<arg>${email}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20231127 14:17:38.931" level="INFO">Fills the text 'Isacosta@gmail.com' in the given field.</msg>
-<status status="PASS" starttime="20231127 14:17:38.931" endtime="20231127 14:17:38.982"/>
-</kw>
-<kw name="Fill Text" library="Browser">
-<arg>id=password</arg>
-<arg>${password}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20231127 14:17:38.983" level="INFO">Fills the text 'pwd123' in the given field.</msg>
-<status status="PASS" starttime="20231127 14:17:38.983" endtime="20231127 14:17:39.030"/>
-</kw>
-<kw name="Click" library="Browser">
-<arg>id=buttonSignup</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20231127 14:17:39.031" endtime="20231127 14:17:39.118"/>
-</kw>
-<kw name="Wait For Elements State" library="Browser">
-<arg>css=.notice p</arg>
-<arg>visible</arg>
-<arg>5</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20231127 14:17:39.233" level="INFO">Waited for Element with selector css=.notice p at state visible</msg>
-<status status="PASS" starttime="20231127 14:17:39.119" endtime="20231127 14:17:39.233"/>
-</kw>
-<kw name="Get Text" library="Browser">
-<arg>css=.notice p</arg>
-<arg>equal</arg>
-<arg>Boas vindas ao Mark85, o seu gerenciador de tarefas.</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20231127 14:17:40.290" level="INFO">Text: 'Oops! Já existe uma conta com o e-mail informado.'</msg>
-<msg timestamp="20231127 14:17:40.597" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<msg timestamp="20231127 14:17:40.597" level="INFO">See also file:///C:/QAx/projects/mark85-rodot-express/logs/playwright-log.txt for additional details.</msg>
-<msg timestamp="20231127 14:17:40.597" level="FAIL">Text 'Oops! Já existe uma conta com o e-mail informado.' (str) should be 'Boas vindas ao Mark85, o seu gerenciador de tarefas.' (str)</msg>
-<status status="FAIL" starttime="20231127 14:17:39.234" endtime="20231127 14:17:40.624"/>
-</kw>
-<status status="FAIL" starttime="20231127 14:17:36.060" endtime="20231127 14:17:40.625">Text 'Oops! Já existe uma conta com o e-mail informado.' (str) should be 'Boas vindas ao Mark85, o seu gerenciador de tarefas.' (str)</status>
+<status status="PASS" starttime="20231127 15:48:05.345" endtime="20231127 15:48:07.868"/>
 </test>
-<doc>Cenarios de testes do cadastro de usuarios de</doc>
-<status status="FAIL" starttime="20231127 14:17:34.733" endtime="20231127 14:17:40.764"/>
+<doc>Online</doc>
+<status status="PASS" starttime="20231127 15:48:03.985" endtime="20231127 15:48:08.041"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Signup">Signup</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Online">Online</stat>
 </suite>
 </statistics>
 <errors>
