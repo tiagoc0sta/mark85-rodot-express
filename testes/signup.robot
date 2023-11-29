@@ -5,6 +5,14 @@ Library    FakerLibrary
 
 Resource    ../resources/base.robot
 
+*** Variables ***
+#${name}        Dodo
+#${email}       dodo@gmail.com
+#${password}    pwd123
+
+
+
+
 *** Test Cases ***
 Deve poder cadastrar um novo usuário
     #Massa de teste dinamica
@@ -32,6 +40,4 @@ Deve poder cadastrar um novo usuário
     #Validação de msg de boas vindas. Garantia de que o user foi cadastrado
     Wait For Elements State    css=.notice p    visible    5
     Get Text                   css=.notice p    equal      Boas vindas ao Mark85, o seu gerenciador de tarefas.
-
- 
     
