@@ -8,6 +8,6 @@ Resource    ../resources/base.robot
 Webapp deve estar online
     
     Start Session
-    Get Title    equal    Mark85 by QAx
+    Get Title    equal    Mark85 by QAx new
 
     #sleep    10
